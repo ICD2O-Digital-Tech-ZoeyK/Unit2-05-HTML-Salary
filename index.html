@@ -1,9 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="calculate salary with JS" />
+    <meta name="keywords" content="immaculata, ics2o" />
+    <meta name="author" content="Zoey Kariyal" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
+    <link rel="manifest" href="./fav_index/site.webmanifest" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Salary program, with a JS file</title>
   </head>
   <body>
-    <p>Paragraph</p>
+    <center><h1>Salary program, with a JS file</h1></center>
+    <form action="#">
+      <h3>Please enter your employment information:</h3>
+      <div class="mdl-textfield mdl-js-textfield">
+        <h4>Numbers of Hours Worked:</h4>
+        <div class="mdl-textfield mdl-js-textfield">
+         <input
+           class="mdl-textfield__input"
+           type="number"
+           pattern="-?[0-9]*(\.[0-9]+)?"
+           id="hours-worked"
+        />
+        <label class="mdl-textfield__label" for="hours-worked">Hours...</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+    </form>
+				
+    <!-- Numeric Textfield -->
+    <form action="#">
+      <h3>Hourly Rate: $</h3>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input
+          class="mdl-textfield__input"
+          type="number"
+          pattern="-?[0-9]*(\.[0-9]+)?"
+          id="hourly-rate"
+        />
+        <label class="mdl-textfield__label" for="width-of-rectangle">Rate...</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+     </form>
+				
+     <!-- Raised button with ripple -->
+     <button
+       class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+      onclick="calculate()"
+    >
+      Calculate
+    </button>
+    <br />
+    <p>
+      <div id="answers">
+        <div id="area"></div>
+        <div id="perimeter"></div>
+      </div>
+    </p>
+    </main>
+   </div>
   </body>
 </html>
